@@ -1,0 +1,28 @@
+# Arch-yukleyici
+
+UYARI: Test aşamasındadır. Denemeyiniz.
+
+ÖZELLİKLER
+
+Disk bölümlerini yapılandırma
+Temel sistemi yükleme
+Ekran kartı sürücülerini yükleme (Intel / Nvidia )
+Bluetooth yükleme ve yapılandırma
+Kullanıcı oluşturma
+Gerekli yazılımların kurulması
+Çeşitli masaüstü seçimi ve kurulumu (Gnome,Kde,Lxde,Mate ve Xfce vs.)
+
+
+NASIL KULLANILIR?
+
+Arch Linux live cd (usb) ile boot edip ve internet bağlantısını kontrol ettikten sonra;
+
+
+wget https://git.io/vxFmn -O live.sh
+
+chmod +x live.sh
+
+./live.sh
+
+
+komutlarını uygulayın.
