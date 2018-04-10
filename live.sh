@@ -135,7 +135,7 @@ install(){
 }
 
 config(){
-    wget https://raw.githubusercontent.com/archtrorg/Arch-yükleyici/master/config.sh -O /mnt/root/config.sh
+    wget https://raw.githubusercontent.com/archtrorg/Arch-yukleyici/master/config.sh -O /mnt/root/config.sh
     chmod +x /mnt/root/config.sh
     arch-chroot /mnt /root/config.sh
 }
