@@ -18,7 +18,7 @@ NASIL KULLANILIR?
 Arch Linux live cd (usb) ile boot edip ve internet bağlantısını kontrol ettikten sonra;
 
 
-wget https://git.io/vxbIz -O live.sh
+wget https://git.io/vxbYB -O live.sh
 
 chmod +x live.sh
 
