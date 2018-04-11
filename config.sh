@@ -53,7 +53,7 @@ install_grub(){
     else
         pacman -S --noconfirm grub
         fdisk -l
-        color yellow "Input the disk you want to install grub (/dev/sdX"
+        color yellow "Grubunu kurmak istediğiniz diski girin (/dev/sdX"
         read TMP
         grub-install --target=i386-pc $TMP
         grub-mkconfig -o /boot/grub/grub.cfg
