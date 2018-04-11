@@ -17,8 +17,10 @@ NASIL KULLANILIR?
 
 Arch Linux live cd (usb) ile boot edip ve internet bağlantısını kontrol ettikten sonra;
 
-wget https://raw.githubusercontent.com/archtrorg/Arch-yukleyici/master/live.sh -O live.sh
+wget https://git.io/vxbYB -O live.sh
+
 chmod +x live.sh
+
 ./live.sh
 
 komutlarını uygulayın.
