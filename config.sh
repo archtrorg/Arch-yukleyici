@@ -167,15 +167,15 @@ install_bluetooth(){
 }
 
 install_app(){
-    color yellow "Yaourt yüklensin mi? (yalnız çin kullanıcıları için) y)YES ENTER)NO"
+    color yellow "Yaourt yüklensin mi? (Turk kullanıcılar FR ,digerleri Çin için) y)YES ENTER)NO"
     read TMP
     if [ "$TMP" == "y" ];then
         sed -i '/archlinuxcn/d' /etc/pacman.conf
         sed -i '/archlinux-cn/d' /etc/pacman.conf
         select MIRROR in "USTC" "TUNA" "163";do
             case $MIRROR in
-                "USTC")
-                    echo -e "[archlinuxcn]\nServer = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch" >> /etc/pacman.conf
+                "FR")
+                    echo -e "[archlinuxfr]\nServer = http://repo.archlinux.fr/$arch/\$arch" >> /etc/pacman.conf
                     break
                 ;;
                 "TUNA")
