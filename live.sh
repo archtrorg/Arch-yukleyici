@@ -108,11 +108,11 @@ prepare(){
         done
     fi
     mount $ROOT /mnt
-    color green "Başka bir bağlama noktanız var mı ? if so please input it, such as : /boot /home and swap or just ENTER to skip"
+    color green "Başka bir bağlama noktanız var mı ? varsa lütfen giriniz.örnegin : /boot /home ve swap gibi.Degilse ENTER tuşu ile geçin"
     read other
     while [ "$other" != '' ];do
         partition $other
-        color green "Hala başka bir bağlama noktası varmı ? input it or just ENTER"
+        color green "Hala başka bir bağlama noktası varmı ? yoksa ENTER tuşu ile geçin"
         read other
     done
 }
