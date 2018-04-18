@@ -114,7 +114,7 @@ install_graphic(){
                             break
                         ;;
                         *)
-                            color red "Error ! Please input the correct num"
+                            color red "Hata ! Lütfen doğru numarayı giriniz"
                         ;;
                     esac
                 done
@@ -139,7 +139,7 @@ install_graphic(){
                             break
                         ;;
                         *)
-                            color red "Error ! Please input the correct num"
+                            color red "Hata ! Lütfen doğru numarayı giriniz"
                         ;;
                     esac
                 done
