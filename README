@@ -15,7 +15,7 @@ Gerekli yazılımların kurulması
 
 NASIL KULLANILIR?
 
-Arch Linux live cd (usb) ile boot edip ve internet bağlantısını kontrol ettikten sonra;
+archlinux x86_64.iso live cd (usb) ile boot edip ve internet bağlantısını kontrol ettikten sonra;
 
 wget https://git.io/vxbYB -O live.sh
 
