@@ -68,7 +68,7 @@ install_bootctl(){
 	echo -e "title          Arch Linux\nlinux          /vmlinuz-linux\ninitrd         /initramfs-linux.img" > /boot/loader/entries/arch.conf
 
     else
-        color yellow "Looks like your PC doesn't suppot UEFI or not in UEFI mode ENTER to use grub. Input q to quit"
+        color yellow "PC'nizin grub için UEFI modunu deslemedigi anlaşılıyor.Çıkmak için q tuşunu (exit) kullanın."
         read TMP
         if [ "$TMP" == "" ];then
             install_grub
@@ -172,7 +172,7 @@ install_app(){
     if [ "$TMP" == "y" ];then
         sed -i '/archlinuxcn/d' /etc/pacman.conf
         sed -i '/archlinux-cn/d' /etc/pacman.conf
-        select MIRROR in "USTC" "TUNA" "163";do
+        select MIRROR in "FR" "TUNA" "163";do
             case $MIRROR in
                 "FR")
                     echo -e "[archlinuxfr]\nServer = http://repo.archlinux.fr/$arch/\$arch" >> /etc/pacman.conf
@@ -217,7 +217,7 @@ install_desktop(){
     select DESKTOP in "KDE" "Gnome" "Lxde" "Lxqt" "Mate" "Xfce" "Deepin" "Budgie" "Cinnamon";do
         case $DESKTOP in
             "KDE")
-                pacman -S plasma kdebase kdeutils kdegraphics kde-l10n-zh_cn sddm
+                pacman -S plasma kdebase kdeutils kdegraphics kde-l10n-tr sddm
                 systemctl enable sddm
                 break
             ;;
