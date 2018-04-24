@@ -221,6 +221,11 @@ install_desktop(){
                 systemctl enable sddm
                 break
             ;;
+	    "Gnome-Minimal")
+	        pacman -S gnome-shell gdm gnome-terminal gnome-settings-daemon
+		systemctl enable gdm
+		break
+	    ;;
             "Gnome")
                 pacman -S gnome gnome-terminal
                 systemctl enable gdm
