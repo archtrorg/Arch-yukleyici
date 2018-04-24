@@ -172,7 +172,7 @@ install_app(){
     if [ "$TMP" == "y" ];then
         sed -i '/archlinuxcn/d' /etc/pacman.conf
         sed -i '/archlinux-cn/d' /etc/pacman.conf
-        select MIRROR in "FR" "TUNA" "163";do
+        select MIRROR in "USTC" "TUNA" "163";do
             case $MIRROR in
                 "USTC")
                     echo -e "[archlinuxcn]\nServer = https://mirrors.ustc.edu.cn/archlinuxcn/\$arch" >> /etc/pacman.conf
@@ -214,7 +214,7 @@ install_app(){
 
 install_desktop(){
     color yellow "Kullanmak istediğiniz masaüstünü seçin"
-    select DESKTOP in "KDE" "Gnome" "Lxde" "Lxqt" "Mate" "Xfce" "Deepin" "Budgie" "Cinnamon";do
+    select DESKTOP in "KDE" "Gnome-Minimal" "Gnome" "Lxde" "Lxqt" "Mate" "Xfce" "Deepin" "Budgie" "Cinnamon";do
         case $DESKTOP in
             "KDE")
                 pacman -S plasma kdebase kdeutils kdegraphics kde-l10n-tr sddm
