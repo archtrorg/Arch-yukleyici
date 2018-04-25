@@ -1,6 +1,6 @@
 # Arch-yukleyici
 
-UYARI: Test aşamasındadır. Denemeyiniz.
+UYARI: Deneyimli Linux kullanıcıları içindir.Yeni başlayanlar için önerilmez.
 
 ÖZELLİKLER
 
@@ -15,7 +15,7 @@ Gerekli yazılımların kurulması
 
 NASIL KULLANILIR?
 
-archlinux x86_64.iso live cd (usb) ile boot edip ve internet bağlantısını kontrol ettikten sonra;
+archlinux x86_64.iso https://www.archlinux.org/download/  live cd (usb) ile boot edip ve internet bağlantısını kontrol ettikten sonra;
 
 wget https://git.io/vxbYB -O live.sh
 
@@ -23,4 +23,4 @@ chmod +x live.sh
 
 ./live.sh
 
-komutlarını uygulayın.
+komutlarını uygulayın. Geniş bilgi için: https://www.archtr.org/forum/index.php
