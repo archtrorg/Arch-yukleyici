@@ -72,7 +72,7 @@ install_bootctl(){
 	echo -e "title          Arch Linux\nlinux          /vmlinuz-linux\ninitrd         /initramfs-linux.img" > /boot/loader/entries/arch.conf
 
     else
-        color yellow "PC'nizin grub için UEFI modunu deslemedigi anlaşılıyor.Çıkmak için q tuşunu (exit) kullanın."
+        color yellow "PC'nizin grub için UEFI modunu desteklemedigi anlaşılıyor.Çıkmak için q tuşunu (exit) kullanın."
         read TMP
         if [ "$TMP" == "" ];then
             install_grub
