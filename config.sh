@@ -82,6 +82,24 @@ install_bootctl(){
     fi
 }
 
+install_efistub(){
+    UUID=`blkid -s UUID -o value $root`
+    efi=`echo $boot | grep -o "[0-9]*"`
+    if (mount | grep efivarfs > /dev/null 2>&1);then
+        pacman -S --noconfirm efibootmgr
+        rm -f /sys/firmware/efi/efivars/dump-*
+        efibootmgr --disk $boot --part $efi --create --label "Arch Linux" --loader /vmlinuz-linux --unicode "root=UUID=$UUID rw initrd=\initramfs-linux.img"
+    else
+        color yellow "Looks like your PC doesn't suppot UEFI or not in UEFI mode ENTER to use grub. Input q to quit"
+        read TMP
+        if [ "$TMP" == "" ];then
+            install_grub
+        else
+            exit
+        fi
+    fi
+}
+
 add_user(){
     color yellow "Kullanmak istediğiniz kullanıcı adını girin (must be lower case)"
     read USER
