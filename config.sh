@@ -103,7 +103,7 @@ install_efistub(){
 add_user(){
     color yellow "Kullanmak istediğiniz kullanıcı adını girin (must be lower case)"
     read USER
-    useradd -m -g wheel $USER
+    useradd -m -g users -G optical,storage,wheel,video,audio,users,power,network,log -s /bin/bash $USER
     color yellow "Parolanızı girin"
     passwd $USER
     pacman -S --noconfirm sudo
