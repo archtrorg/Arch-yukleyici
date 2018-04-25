@@ -55,7 +55,7 @@ install_grub(){
         grub-install --target=`uname -m`-efi --efi-directory=/boot --bootloader-id=Arch
         grub-mkconfig -o /boot/grub/grub.cfg
     else
-        pacman -S --noconfirm grub
+        pacman -S --noconfirm grub os-prober
         fdisk -l
         color yellow "Grubunu kurmak istediğiniz diski girin (/dev/sdX"
         read TMP
