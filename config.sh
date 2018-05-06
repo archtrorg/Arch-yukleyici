@@ -66,7 +66,7 @@ install_grub(){
 
 install_bootctl(){
     if (mount | grep efivarfs > /dev/null 2>&1);then
-        bootctl --path=esp install
+        bootctl --path=/boot install
         cp /usr/share/systemd/bootctl/loader.conf /boot/loader/
 	echo "timeout 4" >> /boot/loader/loader.conf
 	echo -e "title          Arch Linux\nlinux          ../vmlinuz-linux\ninitrd         ../initramfs-linux.img" > /boot/loader/entries/arch.conf
@@ -83,7 +83,7 @@ install_bootctl(){
 }
 
 install_efistub(){
-    UUID=`blkid -s UUID -o value $root`
+    UUID=`blkid | grep $boot | sed 's/.* UUID="//g' | sed 's/".*//g'`
     efi=`echo $boot | grep -o "[0-9]*"`
     if (mount | grep efivarfs > /dev/null 2>&1);then
         pacman -S --noconfirm efibootmgr
