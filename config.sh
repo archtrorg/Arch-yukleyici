@@ -69,7 +69,7 @@ install_bootctl(){
         bootctl --path=esp install
         cp /usr/share/systemd/bootctl/loader.conf /boot/loader/
 	echo "timeout 4" >> /boot/loader/loader.conf
-	echo -e "title          Arch Linux\nlinux          /vmlinuz-linux\ninitrd         /initramfs-linux.img" > /boot/loader/entries/arch.conf
+	echo -e "title          Arch Linux\nlinux          ../vmlinuz-linux\ninitrd         ../initramfs-linux.img" > /boot/loader/entries/arch.conf
 
     else
         color yellow "PC'nizin grub için UEFI modunu desteklemedigi anlaşılıyor.Çıkmak için q tuşunu (exit) kullanın."
