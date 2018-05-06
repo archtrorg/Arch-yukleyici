@@ -244,7 +244,7 @@ install_desktop(){
                 break
             ;;
 	    "Gnome-Minimal")
-	        pacman -S gnome-shell gdm lightdm lightdm-gtk-greeter gnome-terminal gnome-settings-daemon
+	        pacman -S gnome-shell gdm lightdm lightdm-gtk-greeter gnome-terminal gnome-settings-daemon gnome-control-center
 		systemctl enable lightdm
 		break
 	    ;;
