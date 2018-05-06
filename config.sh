@@ -303,6 +303,8 @@ main(){
     read TMP
     if [ "$TMP" == "y" ];then
         install_bootctl
+    elif [ "$TMP" == "e" ];then
+       install_efistub
     else
         install_grub
     fi
