@@ -299,7 +299,7 @@ install_desktop(){
 main(){
     config_base
     config_locale
-    color yellow "GRUB veya Bootctl tercihiniz ? y)Bootctl ENTER)GRUB"
+    color yellow "Use Bootctl EFISTUB or GRUB ? b)Bootctl e)EFISTUB ENTER)GRUB"
     read TMP
     if [ "$TMP" == "y" ];then
         install_bootctl
