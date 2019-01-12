@@ -22,10 +22,10 @@ partition(){
     fdisk -l
     color green "Disk bölümünü girin (/dev/sdaX"
     read OTHER
-    color green "Biçimlendirmek istiyormusunuz ? y)yes ENTER)no"
+    color green "Biçimlendirmek istiyormusunuz ? e)Evet ENTER)Hayır"
     read tmp
 
-    if [ "$tmp" == y ];then
+    if [ "$tmp" == e ];then
         umount $OTHER > /dev/null 2>&1
         color green "Biçimlendirmek için dosya sisteminin türünü belirtin"
         select type in 'ext2' "ext3" "ext4" "btrfs" "xfs" "jfs" "fat" "swap";do
@@ -81,18 +81,18 @@ partition(){
 
 prepare(){
     fdisk -l
-    color green "Bölümü ayarlamak istiyor musunuz? ? y)yes ENTER)no"
+    color green "Bölümü ayarlamak istiyor musunuz? e)Evet ENTER)Hayır"
     read tmp
-    if [ "$tmp" == y ];then
+    if [ "$tmp" == e ];then
         color green "Diski girin (/dev/sdX"
         read TMP
         cfdisk $TMP
     fi
     color green "ROOT bölümünü girin(/) mount point:"
     read ROOT
-    color green "Format atılsın mı ? y)yes ENTER)no"
+    color green "Format atılsın mı? e)Evet ENTER)Hayır"
     read tmp
-    if [ "$tmp" == y ];then
+    if [ "$tmp" == e ];then
         umount $ROOT > /dev/null 2>&1
         color green "Biçimlendirmek için dosya sisteminin türünü belirtin"
         select type in "ext4" "btrfs" "xfs" "jfs";do
