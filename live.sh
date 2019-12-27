@@ -130,7 +130,7 @@ install(){
 	break
     done
 
-    pacstrap /mnt base base-devel --force
+    pacstrap /mnt base base-devel
     genfstab -U -p /mnt > /mnt/etc/fstab
 }
 
